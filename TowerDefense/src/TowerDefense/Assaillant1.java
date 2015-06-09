@@ -7,6 +7,6 @@ class Assaillant1 extends ASSAILLANTS {
 	protected float vitesse_deplacement;
 	protected int portee;
 	protected float resistance;
-	protected int ressources_gagnees;
+	protected char ressources_gagnees;
 	
 }

@@ -8,4 +8,6 @@ class Assaillant3 extends ASSAILLANTS {
 	protected int portee;
 	protected float resistance;
 	protected int ressources_gagnees;
+	
+	test
 }

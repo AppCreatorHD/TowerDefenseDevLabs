@@ -9,4 +9,5 @@ class Assaillant4 extends ASSAILLANTS {
 	protected float resistance;
 	protected int ressources_gagnees;
 
+	test
 }

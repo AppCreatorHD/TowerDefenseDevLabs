@@ -19,7 +19,4 @@ public class ASSAILLANTS {
 	
 	// faire les méthodes
 	
-	
-	
-	
 }

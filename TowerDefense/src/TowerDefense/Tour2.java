@@ -2,7 +2,7 @@ package TowerDefense;
 
 class Tour2 extends Tours {
 	protected int cout = 75; 
-	protected char type_degat = bison;
+	protected String type_degat = "bison";
 	protected int nombre_degat = 20;
 	protected float vitesse_recharge = 3;
 	protected int portee = 3;

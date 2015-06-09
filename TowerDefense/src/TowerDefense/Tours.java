@@ -4,7 +4,7 @@ import javax.print.DocFlavor.STRING;
 
 public class Tours extends CASE {
 	protected int cout;
-	protected char type_degat;
+	protected String type_degat;
 	protected int nombre_degat;
 	protected float vitesse_recharge; 
 	protected int portee;

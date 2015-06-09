@@ -7,7 +7,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Fenetre fenetre = new Fenetre();
 		
-		fenetre.setSize(460,335);
+		fenetre.setSize(800,600);
 		fenetre.setVisible(true);
 	}
 

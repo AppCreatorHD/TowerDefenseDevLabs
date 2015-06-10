@@ -1,34 +1,53 @@
 package TowerDefense;
 
 import javax.swing.JFrame;
-
 import java.awt.Color;
-
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
-/*import javax.swing.LayoutStyle.ComponentPlacement;
-import java.awt.Panel;
-import java.awt.Canvas;
-import java.awt.Label;*/
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JLabel;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.Toolkit;
-//import javax.swing.JPanel;
 
 public class choixJeu extends JFrame {
 	public choixJeu() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("Image/imgDL.jpg"));
+		setResizable(false);
 		setTitle("Tower Defense");
 		getContentPane().setBackground(Color.BLACK);
 		
 		JButton btnCarte = new JButton("Carte 1");
+		btnCarte.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				dispose();
+				Carte carte = new Carte();
+				carte.setSize(800,600);
+				carte.setVisible(true);
+				carte.setLocationRelativeTo(null);
+			}
+		});
 		
 		JButton btnCarte_1 = new JButton("Carte 2");
+		btnCarte_1.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				dispose();
+				Carte_1 carte_1 = new Carte_1();
+				carte_1.setSize(800,600);
+				carte_1.setVisible(true);
+				carte_1.setLocationRelativeTo(null);
+			}
+		});
 		
 		JButton btnCarte_2 = new JButton("Carte 3");
+		btnCarte_2.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				dispose();
+				Carte_2 carte_2 = new Carte_2();
+				carte_2.setSize(800,600);
+				carte_2.setVisible(true);
+				carte_2.setLocationRelativeTo(null);
+			}
+		});
 		
 		JButton btnRetour = new JButton("Retour");
 		btnRetour.addActionListener(new ActionListener(){

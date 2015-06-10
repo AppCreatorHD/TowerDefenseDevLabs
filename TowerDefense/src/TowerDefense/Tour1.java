@@ -1,6 +1,7 @@
 package TowerDefense;
 
 class Tour1 extends Tours {
+	
 	protected int cout = 50;
 	protected String type_degat = "negev";
 	protected int nombre_degat = 5;

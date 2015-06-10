@@ -1,18 +1,18 @@
 package TowerDefense;
 
 import javax.swing.JFrame;
-import java.awt.BorderLayout;
+/*import java.awt.BorderLayout;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.factories.FormFactory;
+import com.jgoodies.forms.factories.FormFactory;*/
 import javax.swing.JButton;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextField;
+// import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Color;
 import java.awt.Font;
@@ -21,6 +21,8 @@ import javax.swing.ImageIcon;
 
 public class Fenetre extends JFrame {
 	public Fenetre() {
+		setResizable(false);
+		setTitle("Tower Defense");
 		getContentPane().setBackground(new Color(0, 0, 0));
 		
 		JButton btnChargerPartie = new JButton("Charger Partie");
@@ -30,6 +32,7 @@ public class Fenetre extends JFrame {
 		btnExit.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
 			}
 		});
 		

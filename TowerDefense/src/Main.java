@@ -9,6 +9,7 @@ public class Main {
 		
 		fenetre.setSize(800,600);
 		fenetre.setVisible(true);
+		fenetre.setLocationRelativeTo(null);
 	}
 
 }

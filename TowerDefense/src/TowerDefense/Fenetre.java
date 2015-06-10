@@ -28,7 +28,7 @@ public class Fenetre extends JFrame {
 		JButton btnChargerPartie = new JButton("Charger Partie");
 		btnChargerPartie.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
-		JButton btnExit = new JButton("Exit");
+		JButton btnExit = new JButton("Quitter");
 		btnExit.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnExit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

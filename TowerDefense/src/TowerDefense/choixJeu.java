@@ -65,5 +65,5 @@ public class choixJeu extends JFrame {
 					.addContainerGap())
 		);
 		getContentPane().setLayout(groupLayout);
-	}
+	 }
 }

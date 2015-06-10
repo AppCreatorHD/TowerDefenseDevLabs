@@ -28,9 +28,9 @@ public class Fenetre extends JFrame {
 		JButton btnChargerPartie = new JButton("Charger Partie");
 		btnChargerPartie.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
-		JButton btnExit = new JButton("Exit");
-		btnExit.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnExit.addActionListener(new ActionListener() {
+		JButton btnQuitter = new JButton("Quitter");
+		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnQuitter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
@@ -45,6 +45,14 @@ public class Fenetre extends JFrame {
 		JButton btnJouer = new JButton("Jouer");
 		btnJouer.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnJouer.setForeground(new Color(0, 0, 0));
+		btnJouer.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				choixJeu ChoixJeu = new choixJeu();
+				ChoixJeu.setSize(800,600);
+				ChoixJeu.setVisible(true);
+				ChoixJeu.setLocationRelativeTo(null);
+			}
+		});
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -52,7 +60,7 @@ public class Fenetre extends JFrame {
 					.addGap(98)
 					.addComponent(btnChargerPartie, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
-					.addComponent(btnExit, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
+					.addComponent(btnQuitter, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
 					.addGap(89))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap(284, Short.MAX_VALUE)
@@ -73,7 +81,7 @@ public class Fenetre extends JFrame {
 					.addGap(45)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnChargerPartie, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnExit, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
+						.addComponent(btnQuitter, GroupLayout.PREFERRED_SIZE, 56, GroupLayout.PREFERRED_SIZE))
 					.addContainerGap())
 		);
 		getContentPane().setLayout(groupLayout);

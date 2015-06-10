@@ -12,9 +12,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 public class Fenetre extends JFrame {
 	public Fenetre() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Image/imgDL.jpg"));
 		setResizable(false);
 		setTitle("Tower Defense");
 		getContentPane().setBackground(new Color(0, 0, 0));

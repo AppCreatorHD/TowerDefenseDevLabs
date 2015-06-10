@@ -13,10 +13,14 @@ import java.awt.Canvas;
 import java.awt.Label;*/
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JLabel;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Toolkit;
 //import javax.swing.JPanel;
 
 public class choixJeu extends JFrame {
 	public choixJeu() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Image/imgDL.jpg"));
 		setTitle("Tower Defense");
 		getContentPane().setBackground(Color.BLACK);
 		
@@ -40,6 +44,10 @@ public class choixJeu extends JFrame {
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(677, Short.MAX_VALUE)
+					.addComponent(btnRetour, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap())
+				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(73)
 					.addComponent(btnCarte, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
 					.addGap(98)
@@ -47,10 +55,6 @@ public class choixJeu extends JFrame {
 					.addGap(97)
 					.addComponent(btnCarte_2, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
 					.addGap(66))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(677, Short.MAX_VALUE)
-					.addComponent(btnRetour, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap())
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)

@@ -16,7 +16,7 @@ import javax.swing.SwingConstants;
 public class Fenetre extends JFrame {
 	public Fenetre() {
 		setResizable(false);
-		setTitle("Tower Defense!");
+		setTitle("Tower Defense");
 		getContentPane().setBackground(new Color(0, 0, 0));
 		
 		JButton btnChargerPartie = new JButton("Charger Partie");

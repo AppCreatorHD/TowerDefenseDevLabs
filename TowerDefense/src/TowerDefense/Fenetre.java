@@ -37,7 +37,7 @@ public class Fenetre extends JFrame {
 		});
 		
 		JLabel lblTowerDefense = new JLabel("");
-		lblTowerDefense.setIcon(new ImageIcon("C:\\Users\\Guillaume\\Downloads\\11350243_1604427286505742_74964194_n.jpg"));
+		lblTowerDefense.setIcon(new ImageIcon("Image/imgTD.jpg"));
 		lblTowerDefense.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 50));
 		lblTowerDefense.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTowerDefense.setForeground(Color.RED);

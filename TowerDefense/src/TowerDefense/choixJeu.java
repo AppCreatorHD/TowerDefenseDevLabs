@@ -8,6 +8,10 @@ import javax.swing.JButton;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Toolkit;
+import javax.swing.JLabel;
+import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.ImageIcon;
+import javax.swing.SwingConstants;
 
 public class choixJeu extends JFrame {
 	public choixJeu() {
@@ -59,26 +63,49 @@ public class choixJeu extends JFrame {
 				fenetre.setLocationRelativeTo(null);
 			}
 		});
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon("Image/Map1.png"));
+		
+		JLabel label = new JLabel("");
+		label.setHorizontalAlignment(SwingConstants.CENTER);
+		label.setIcon(new ImageIcon("Image/Map2.png"));
+		
+		JLabel label_1 = new JLabel("");
+		label_1.setHorizontalAlignment(SwingConstants.CENTER);
+		label_1.setIcon(new ImageIcon("Image/Map3.png"));
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(677, Short.MAX_VALUE)
+					.addContainerGap(687, Short.MAX_VALUE)
 					.addComponent(btnRetour, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(73)
-					.addComponent(btnCarte, GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
+						.addComponent(lblNewLabel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+						.addComponent(btnCarte, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
 					.addGap(98)
-					.addComponent(btnCarte_1, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
-					.addGap(97)
-					.addComponent(btnCarte_2, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
-					.addGap(66))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(label, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+						.addComponent(btnCarte_1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+					.addGap(87)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
+						.addComponent(btnCarte_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(label_1, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+					.addGap(56))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(312, Short.MAX_VALUE)
+					.addContainerGap(190, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_1, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE))
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnCarte_1, GroupLayout.PREFERRED_SIZE, 68, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnCarte_2, GroupLayout.PREFERRED_SIZE, 69, GroupLayout.PREFERRED_SIZE)

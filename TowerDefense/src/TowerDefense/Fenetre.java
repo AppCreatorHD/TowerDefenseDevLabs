@@ -47,6 +47,7 @@ public class Fenetre extends JFrame {
 		btnJouer.setForeground(new Color(0, 0, 0));
 		btnJouer.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+				dispose();
 				choixJeu ChoixJeu = new choixJeu();
 				ChoixJeu.setSize(800,600);
 				ChoixJeu.setVisible(true);

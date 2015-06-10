@@ -29,6 +29,7 @@ public class choixJeu extends JFrame {
 		JButton btnRetour = new JButton("Retour");
 		btnRetour.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
+				dispose();
 				Fenetre fenetre = new Fenetre();
 				fenetre.setSize(800,600);
 				fenetre.setVisible(true);

@@ -16,6 +16,28 @@ public class ASSAILLANTS {
 	protected int y;
 	protected int direction;
 	protected char dessin;
+	protected int nbr_assaillants = 5;
+	public int nextInt(int n) {
+		return 0;
+	}
+	
+	public ASSAILLANTS genererAssaillantRandom()
+	{
+		Object hasard = null;
+		switch (((ASSAILLANTS) hasard).nextInt(nbr_assaillants)) {
+		case 0:
+			return new Assaillant1();
+		case 1:
+			return new Assaillant2();
+		case 2:
+			return new Assaillant3();
+		case 3:
+			return new Assaillant4();
+		default:
+			return new Assaillant5();
+		}
+	
+	}
 	
 	// faire les méthodes
 	

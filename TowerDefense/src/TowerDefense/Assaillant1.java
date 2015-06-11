@@ -2,11 +2,18 @@ package TowerDefense;
 
 class Assaillant1 extends ASSAILLANTS {
 
-	protected int nombre_hp = 5;
-	protected int nombre_degats = 25;
-	protected float vitesse_deplacement = 1;
-	protected int portee = 2;
-	protected float resistance = 0;
-	protected int ressources_gagnees = 10;
+	public class Assaillant1 extends ASSAILLANTS{
+	
+	this.nombre_hp = 5;
+	this.nombre_degats = 25;
+	this.vitesse_deplacement = 1;
+	this.portee = 2;
+	this.resistance = 0;
+	this.ressources_gagnees = 10;
+	
+	}
 	
 }
+
+}
+

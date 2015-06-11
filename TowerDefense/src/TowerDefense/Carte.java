@@ -2,18 +2,22 @@ package TowerDefense;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
+import javax.swing.border.Border;
 
 public class Carte extends JFrame {
 	public int heure=0, minute=0, seconde=0;
@@ -130,4 +134,19 @@ public class Carte extends JFrame {
      timer1.start();
 
 	}
+	
+	JFrame t = new JFrame();
+	JPanel pan = new JPanel (new GridLayout (15,15));
+	Border whiteline = BorderFactory.createLineBorder(Color.black,1);
+	
+	{
+	for(int i = 0; i<225;i++){
+	   JPanel ptest = new JPanel();
+	   ptest.setBorder(whiteline);
+	   pan.add(ptest);
+	}
+	pan.setBorder(whiteline);
+	t.add(pan);
+	t.setVisible(true);
+}
 }

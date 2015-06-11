@@ -20,10 +20,11 @@ import javax.swing.Timer;
 import javax.swing.border.Border;
 
 public class Carte extends JFrame {
-	public int heure=0, minute=0, seconde=0, ressources=0;
+	public int heure=0, minute=0, seconde=0, ressources=100;
 	public int delais=1000;
 	
-	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde+" "+ressources);
+	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde);
+	public JLabel lblNewLabel_2 = new JLabel(""+ressources);
 	public ActionListener tacheTimer;
 	public Timer timer1;
 	
@@ -39,6 +40,10 @@ public class Carte extends JFrame {
 		lblNewLabel_1.setForeground(Color.RED);
 		lblNewLabel_1.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 20));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
+		
+		lblNewLabel_2.setForeground(Color.RED);
+		lblNewLabel_2.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 20));
+		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(Color.BLACK);
@@ -66,6 +71,7 @@ public class Carte extends JFrame {
 		
 		JButton btnSuppr = new JButton("Suppr");
 		
+		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -75,25 +81,27 @@ public class Carte extends JFrame {
 					.addGap(18)
 					.addComponent(btnTour, GroupLayout.PREFERRED_SIZE, 69, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
-					.addComponent(btnTour_1, GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+					.addComponent(btnTour_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(18)
-					.addComponent(btnTour_2, GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+					.addComponent(btnTour_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(18)
-					.addComponent(btnAmlior, GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+					.addComponent(btnAmlior, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(18)
-					.addComponent(btnSuppr, GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+					.addComponent(btnSuppr, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addGap(154))
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(31)
-					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
-					.addGap(95)
+					.addGap(20)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING, false)
+						.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
+					.addGap(79)
 					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(209, Short.MAX_VALUE))
+					.addContainerGap(191, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(71, Short.MAX_VALUE)
+					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addGap(44)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
@@ -107,7 +115,9 @@ public class Carte extends JFrame {
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(106)
 					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(441, Short.MAX_VALUE))
+					.addGap(18)
+					.addComponent(lblNewLabel_2, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(336, Short.MAX_VALUE))
 		);
 		getContentPane().setLayout(groupLayout);
 	}
@@ -125,7 +135,8 @@ public class Carte extends JFrame {
 		      heure++;
 		   }
 		  //Afficher le chrono dans un JLabel
-		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde+" "+ressources);
+		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde);
+		  lblNewLabel_2.setText(""+ressources);
  
 		 }
      };
@@ -147,7 +158,7 @@ public class Carte extends JFrame {
 	   pan.add(ptest);
 	}
 	pan.setBorder(whiteline);
-	t.add(pan);
+	t.getContentPane().add(pan);
 	t.setVisible(true);
 }
 }

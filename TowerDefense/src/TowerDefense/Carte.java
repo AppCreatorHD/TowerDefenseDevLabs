@@ -80,10 +80,11 @@ public class Carte extends JFrame {
 		btnQuitter.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				dispose();
-				choixJeu ChoixJeu = new choixJeu();
-				ChoixJeu.setSize(800,600);
-				ChoixJeu.setVisible(true);
-				ChoixJeu.setLocationRelativeTo(null);
+				Fenetre fenetre = new Fenetre();
+				
+				fenetre.setSize(800,600);
+				fenetre.setVisible(true);
+				fenetre.setLocationRelativeTo(null);
 			}
 		});
 		

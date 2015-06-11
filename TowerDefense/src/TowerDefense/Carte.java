@@ -1,6 +1,7 @@
 package TowerDefense;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,6 +31,10 @@ public class Carte extends JFrame {
 		
 		this.getContentPane().add(lblNewLabel_1);
 		chrono();
+		
+		lblNewLabel_1.setForeground(Color.RED);
+		lblNewLabel_1.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 20));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(Color.BLACK);

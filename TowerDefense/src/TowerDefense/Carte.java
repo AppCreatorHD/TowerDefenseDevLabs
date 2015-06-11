@@ -10,11 +10,11 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
 import javax.swing.border.Border;
@@ -76,6 +76,16 @@ public class Carte extends JFrame {
 		
 		JButton btnSuppr = new JButton("Suppr");
 		
+		JButton btnQuitter = new JButton("Quitter");
+		btnQuitter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				dispose();
+				choixJeu ChoixJeu = new choixJeu();
+				ChoixJeu.setSize(800,600);
+				ChoixJeu.setVisible(true);
+				ChoixJeu.setLocationRelativeTo(null);
+			}
+		});
 		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
@@ -102,11 +112,17 @@ public class Carte extends JFrame {
 					.addGap(79)
 					.addComponent(pnlNewPanel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(191, Short.MAX_VALUE))
+					.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(695, Short.MAX_VALUE)
+					.addComponent(btnQuitter)
+					.addContainerGap())
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addContainerGap()
+					.addComponent(btnQuitter)
+					.addPreferredGap(ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
 					.addComponent(pnlNewPanel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addGap(44)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)

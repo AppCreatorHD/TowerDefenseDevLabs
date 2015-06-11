@@ -10,6 +10,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -50,7 +51,7 @@ public class Carte_2 extends JFrame {
 		Border whiteline = BorderFactory.createLineBorder(Color.white,1);
 		{
 			for(int i=0; i<225;i++){
-				JPanel ptest = new JPanel();
+				JButton ptest = new JButton();
 				ptest.setBorder(whiteline);
 				pnlNewPanel.add(ptest);
 			}
@@ -77,6 +78,17 @@ public class Carte_2 extends JFrame {
 		
 		JButton btnSuppr = new JButton("Suppr");
 		
+		JButton btnQuitter = new JButton("Quitter");
+		btnQuitter.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				dispose();
+				choixJeu ChoixJeu = new choixJeu();
+				ChoixJeu.setSize(800,600);
+				ChoixJeu.setVisible(true);
+				ChoixJeu.setLocationRelativeTo(null);
+			}
+		});
+		
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -102,11 +114,17 @@ public class Carte_2 extends JFrame {
 					.addGap(79)
 					.addComponent(pnlNewPanel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(191, Short.MAX_VALUE))
+					.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(695, Short.MAX_VALUE)
+					.addComponent(btnQuitter)
+					.addContainerGap())
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addContainerGap()
+					.addComponent(btnQuitter)
+					.addPreferredGap(ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
 					.addComponent(pnlNewPanel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addGap(44)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
@@ -151,4 +169,5 @@ public class Carte_2 extends JFrame {
      timer1.start();
 
 	}
+	
 }

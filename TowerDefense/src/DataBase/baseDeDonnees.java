@@ -1,20 +1,36 @@
 package DataBase;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class baseDeDonnees {
 	public static void baseDeDonees(){
+		System.out.println("Test");
+		String url = "jdbc:mysql://localhost:3306/towerdevlabs";
+		String login = "root";
+		String mdp = "admin";
+		Connection connexion = null;
+		Statement stmt;
 		try{
-			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/towerdevlabs","root","admin");
-			Statement myStmt = myConn.createStatement();
-			ResultSet myRs = myStmt.executeQuery("select * from employees");
+			connexion = DriverManager.getConnection(url,login,mdp);
+			System.out.println("TEST WECH");
+			stmt = connexion.createStatement();
+			System.out.println("TEST Pas WECH");
+			ResultSet resultatBdd = stmt.executeQuery("SELECT Map");
+		while (resultatBdd.next()){
+			String carte = resultatBdd.getString("Map");
+			System.out.println("Carte :" + carte);
+		}
 		}
 		catch(SQLException e){
-			System.out.println("Epitaph !");
+			
 		}
-	}
+		finally{
+			if(connexion != null )
+				try{
+					connexion.close();
+				}
+				catch(SQLException ignore){
+			}
+		}
+}
 }

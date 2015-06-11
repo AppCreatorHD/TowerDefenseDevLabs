@@ -2,16 +2,20 @@ package TowerDefense;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.border.Border;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
@@ -41,11 +45,16 @@ public class Carte_1 extends JFrame {
 		lblNewLabel_2.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(Color.BLACK);
-		lblNewLabel.setForeground(Color.BLACK);
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon("Image/Map2-2.png"));
+		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
+		Border whiteline = BorderFactory.createLineBorder(Color.white,1);
+		{
+			for(int i=0; i<225;i++){
+				JPanel ptest = new JPanel();
+				ptest.setBorder(whiteline);
+				pnlNewPanel.add(ptest);
+			}
+			pnlNewPanel.setBorder(whiteline);
+		}
 		
 		JButton btnNewButton = new JButton("Tour1");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -90,14 +99,14 @@ public class Carte_1 extends JFrame {
 						.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE))
 					.addGap(79)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
+					.addComponent(pnlNewPanel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(191, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
+					.addComponent(pnlNewPanel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addGap(44)
 					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)

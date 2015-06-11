@@ -48,7 +48,6 @@ public class Carte extends JFrame {
 		
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
 		{
-			MAP();
 			for(int i=0; i<225;i++){
 				JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
 				pnlNewPanel.add(casemap);
@@ -157,7 +156,7 @@ public class Carte extends JFrame {
 		   }
 		  //Afficher le chrono dans un JLabel
 		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde);
-		  lblNewLabel_2.setText(""+ressources);
+		  lblNewLabel_2.setText("Or: "+ressources);
  
 		 }
      };

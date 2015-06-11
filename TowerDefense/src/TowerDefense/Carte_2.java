@@ -16,10 +16,10 @@ import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 public class Carte_2 extends JFrame {
-	public int heure=0, minute=0, seconde=0;
+	public int heure=0, minute=0, seconde=0, ressources=0;
 	public int delais=1000;
 	
-	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde);
+	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde+" "+ressources);
 	public ActionListener tacheTimer;
 	public Timer timer1;
 	
@@ -111,6 +111,7 @@ public class Carte_2 extends JFrame {
 		ActionListener tacheTimer= new ActionListener()  {
 		  public void actionPerformed(ActionEvent e1)  {
 		    seconde++;
+		    ressources++;
 		     if(seconde==60)  {
 		          seconde=0;
 		          minute++;
@@ -120,7 +121,7 @@ public class Carte_2 extends JFrame {
 		      heure++;
 		   }
 		  //Afficher le chrono dans un JLabel
-		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde);
+		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde+" "+ressources);
  
 		 }
      };

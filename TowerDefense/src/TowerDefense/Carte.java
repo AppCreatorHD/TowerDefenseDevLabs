@@ -7,9 +7,9 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -17,7 +17,6 @@ import javax.swing.JPanel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SwingConstants;
 import javax.swing.Timer;
-import javax.swing.border.Border;
 
 public class Carte extends JFrame {
 	public int heure=0, minute=0, seconde=0, ressources=100;
@@ -46,14 +45,11 @@ public class Carte extends JFrame {
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
-		Border whiteline = BorderFactory.createLineBorder(Color.white,1);
 		{
 			for(int i=0; i<225;i++){
-				JButton ptest = new JButton();
-				ptest.setBorder(whiteline);
-				pnlNewPanel.add(ptest);
+				JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
+				pnlNewPanel.add(casemap);
 			}
-			pnlNewPanel.setBorder(whiteline);
 		}
 		
 		JButton btnNewButton = new JButton("Tour1");

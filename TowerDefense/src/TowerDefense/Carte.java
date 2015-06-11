@@ -1,5 +1,7 @@
 package TowerDefense;
 
+import TowerDefense.MAP;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -46,6 +48,7 @@ public class Carte extends JFrame {
 		
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
 		{
+			MAP();
 			for(int i=0; i<225;i++){
 				JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
 				pnlNewPanel.add(casemap);

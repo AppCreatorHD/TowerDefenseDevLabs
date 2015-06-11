@@ -48,14 +48,11 @@ public class Carte_2 extends JFrame {
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
-		Border whiteline = BorderFactory.createLineBorder(Color.white,1);
 		{
 			for(int i=0; i<225;i++){
-				JButton ptest = new JButton();
-				ptest.setBorder(whiteline);
-				pnlNewPanel.add(ptest);
+				JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
+				pnlNewPanel.add(casemap);
 			}
-			pnlNewPanel.setBorder(whiteline);
 		}
 		
 		JButton btnNewButton = new JButton("Tour1");

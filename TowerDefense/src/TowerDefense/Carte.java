@@ -12,14 +12,24 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import javax.swing.JPanel;
+import javax.swing.Timer;
 
 public class Carte extends JFrame {
+	public int heure=0, minute=0, seconde=0;
+	public int delais=1000;
+	
+	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde);
+	public ActionListener tacheTimer;
+	public Timer timer1;
+	
 	public Carte() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("Image/imgDL.jpg"));
 		setResizable(false);
 		setTitle("Tower Defense");
 		getContentPane().setBackground(Color.BLACK);
+		
+		this.getContentPane().add(lblNewLabel_1);
+		chrono();
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBackground(Color.BLACK);
@@ -47,7 +57,6 @@ public class Carte extends JFrame {
 		
 		JButton btnSuppr = new JButton("Suppr");
 		
-		JPanel panel = new JPanel();
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
@@ -66,14 +75,14 @@ public class Carte extends JFrame {
 					.addComponent(btnSuppr, GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
 					.addGap(154))
 				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(32)
-					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
-					.addGap(94)
+					.addGap(31)
+					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 84, GroupLayout.PREFERRED_SIZE)
+					.addGap(95)
 					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap(209, Short.MAX_VALUE))
 		);
 		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.TRAILING)
+			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap(71, Short.MAX_VALUE)
 					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 375, GroupLayout.PREFERRED_SIZE)
@@ -86,11 +95,34 @@ public class Carte extends JFrame {
 						.addComponent(btnAmlior, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE)
 						.addComponent(btnSuppr, GroupLayout.PREFERRED_SIZE, 55, GroupLayout.PREFERRED_SIZE))
 					.addGap(26))
-				.addGroup(Alignment.LEADING, groupLayout.createSequentialGroup()
-					.addGap(91)
-					.addComponent(panel, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(453, Short.MAX_VALUE))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGap(106)
+					.addComponent(lblNewLabel_1, GroupLayout.PREFERRED_SIZE, 24, GroupLayout.PREFERRED_SIZE)
+					.addContainerGap(441, Short.MAX_VALUE))
 		);
 		getContentPane().setLayout(groupLayout);
+	}
+	public void chrono(){
+		ActionListener tacheTimer= new ActionListener()  {
+		  public void actionPerformed(ActionEvent e1)  {
+		    seconde++;
+		     if(seconde==60)  {
+		          seconde=0;
+		          minute++;
+		      }
+		  if(minute==60) {
+		      minute=0;
+		      heure++;
+		   }
+		  //Afficher le chrono dans un JLabel
+		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde);
+ 
+		 }
+     };
+     //Action et temps execution de la tache
+     timer1=new Timer(delais,tacheTimer);
+     //Demarrer le chrono
+     timer1.start();
+
 	}
 }

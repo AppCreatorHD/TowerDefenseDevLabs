@@ -49,7 +49,7 @@ public class Carte extends JFrame {
 		Border whiteline = BorderFactory.createLineBorder(Color.white,1);
 		{
 			for(int i=0; i<225;i++){
-				JPanel ptest = new JPanel();
+				JButton ptest = new JButton();
 				ptest.setBorder(whiteline);
 				pnlNewPanel.add(ptest);
 			}
@@ -152,18 +152,4 @@ public class Carte extends JFrame {
 
 	}
 	
-	JFrame t = new JFrame();
-	JPanel pan = new JPanel (new GridLayout (15,15));
-	Border whiteline = BorderFactory.createLineBorder(Color.black,1);
-	
-	{
-	for(int i = 0; i<225;i++){
-	   JPanel ptest = new JPanel();
-	   ptest.setBorder(whiteline);
-	   pan.add(ptest);
-	}
-	pan.setBorder(whiteline);
-	t.getContentPane().add(pan);
-	t.setVisible(true);
-}
 }

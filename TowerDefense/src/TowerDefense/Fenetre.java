@@ -55,7 +55,7 @@ public class Fenetre extends JFrame {
 		GroupLayout groupLayout = new GroupLayout(getContentPane());  //permet de positionner les elements dans la fenetre
 		groupLayout.setHorizontalGroup( //decoupe la fenetre en plusieurs colonnes
 			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()  //ajoute 
+				.addGroup(groupLayout.createSequentialGroup()  //ajoute un groupe a un autre
 					.addGap(89)  //intervalle avant le bouton "charger partie"
 					.addComponent(btnChargerPartie, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)  //ajoute un composant en lui attribuant une largeur
 					.addPreferredGap(ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
@@ -70,7 +70,7 @@ public class Fenetre extends JFrame {
 					.addComponent(lblTowerDefense, GroupLayout.PREFERRED_SIZE, 470, GroupLayout.PREFERRED_SIZE)
 					.addGap(155))
 		);
-		groupLayout.setVerticalGroup(
+		groupLayout.setVerticalGroup(  //decoupe la fenetre en plusieurs lignes
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()

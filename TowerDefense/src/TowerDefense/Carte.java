@@ -21,7 +21,7 @@ import javax.swing.SwingConstants;
 import javax.swing.Timer;
 
 public class Carte extends JFrame {
-	public int heure=0, minute=0, seconde=0, ressources=100;
+	public int heure=0, minute=0, seconde=0, ressources=100;  //initialisation pour le timer et les ressources
 	public int delais=1000;
 	
 	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde);
@@ -46,6 +46,7 @@ public class Carte extends JFrame {
 		lblNewLabel_2.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 20));
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		
+		//creation d'une grille de boutons dans un Panel
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
 		{ 
 			for(int i=0; i<225;i++){
@@ -118,6 +119,7 @@ public class Carte extends JFrame {
 		JButton btnNewButton = new JButton("Tour1");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 			}
 		});
 		
@@ -202,6 +204,8 @@ public class Carte extends JFrame {
 		);
 		getContentPane().setLayout(groupLayout);
 	}
+	
+	//affichage du chrono
 	public void chrono(){
 		ActionListener tacheTimer= new ActionListener()  {
 		  public void actionPerformed(ActionEvent e1)  {
@@ -215,16 +219,16 @@ public class Carte extends JFrame {
 		      minute=0;
 		      heure++;
 		   }
-		  //Afficher le chrono dans un JLabel
-		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde);
-		  lblNewLabel_2.setText("Or: "+ressources);
+		 
+		  lblNewLabel_1.setText(heure+":"+minute+":"+seconde);  //Afficher le chrono dans un Label
+		  lblNewLabel_2.setText("Or: "+ressources);  //Afficher les ressources dans un Label
  
 		 }
      };
-     //Action et temps execution de la tache
-     timer1=new Timer(delais,tacheTimer);
-     //Demarrer le chrono
-     timer1.start();
+
+     timer1=new Timer(delais,tacheTimer); //Action et temps execution de la tache
+     
+     timer1.start();  //Demarrer le chrono
 
 	}
 	

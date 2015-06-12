@@ -11,4 +11,16 @@ public class Tours extends CASE {
 	protected int nombre_hp;
 	protected int cout_amelioration;
 	
+	public void ToursAttaques(){
+		
+	}
+	
+	public void ToursAchats(){
+		
+	}
+	
+	public void ToursAmeliorations(){
+		
+	}
+	
 }

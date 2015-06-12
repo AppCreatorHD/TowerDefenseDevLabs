@@ -39,6 +39,12 @@ public class ASSAILLANTS {
 	
 	}
 	
-	// faire les méthodes
+	public void ASSAILLANTSAttaques(){
+		
+	}
 	
+	public void SeDelplacer() {
+		
+	}
 }
+

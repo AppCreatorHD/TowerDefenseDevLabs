@@ -25,7 +25,7 @@ public class Carte extends JFrame {
 	public int delais=1000;
 	
 	public JLabel lblNewLabel_1 = new JLabel(""+heure+":"+minute+":"+seconde);
-	public JLabel lblNewLabel_2 = new JLabel(""+ressources);
+	public JLabel lblNewLabel_2 = new JLabel("Or :"+ressources);
 	public ActionListener tacheTimer;
 	public Timer timer1;
 	
@@ -49,8 +49,14 @@ public class Carte extends JFrame {
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
 		{
 			for(int i=0; i<225;i++){
+				if(i==105){
+					JButton casemap = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemap);
+				}
+				else{
 				JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
 				pnlNewPanel.add(casemap);
+				}
 			}
 		}
 		

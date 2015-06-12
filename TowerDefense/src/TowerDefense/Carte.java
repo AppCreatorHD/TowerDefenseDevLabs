@@ -47,15 +47,70 @@ public class Carte extends JFrame {
 		lblNewLabel_2.setHorizontalAlignment(SwingConstants.RIGHT);
 		
 		JPanel pnlNewPanel = new JPanel(new GridLayout (15,15));
-		{
+		{ 
 			for(int i=0; i<225;i++){
-				if(i==105){
-					JButton casemap = new JButton( new ImageIcon("Image/chemin.jpg"));
+				switch(i){
+				case 105:
+					JButton casemapspawn = new JButton( new ImageIcon("Image/spawn.png"));
+					pnlNewPanel.add(casemapspawn);
+					break;			
+				case 106:
+					JButton casemapchemin = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin);
+					break;
+				case 107:
+					JButton casemapchemin1 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin1);
+					break;
+				case 108:
+					JButton casemapchemin2 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin2);
+					break;
+				case 109:
+					JButton casemapchemin3 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin3);
+					break;
+				case 110:
+					JButton casemapchemin4 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin4);
+					break;
+				case 111:
+					JButton casemapchemin5 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin5);
+					break;
+				case 112:
+					JButton casemapchemin6 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin6);
+					break;
+				case 113:
+					JButton casemapchemin7 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin7);
+					break;
+				case 114:
+					JButton casemapchemin8 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin8);
+					break;
+				case 115:
+					JButton casemapchemin9 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin9);
+					break;
+				case 116:
+					JButton casemapchemin10 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin10);
+					break;
+				case 117:
+					JButton casemapchemin11 = new JButton( new ImageIcon("Image/chemin.jpg"));
+					pnlNewPanel.add(casemapchemin11);
+					break;
+				case 118:
+					JButton casemapchemin12 = new JButton( new ImageIcon("Image/base.png"));
+					pnlNewPanel.add(casemapchemin12);
+					break;
+				default:
+					JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
 					pnlNewPanel.add(casemap);
-				}
-				else{
-				JButton casemap = new JButton( new ImageIcon("Image/herbe.jpg"));
-				pnlNewPanel.add(casemap);
+					break;
+					
 				}
 			}
 		}

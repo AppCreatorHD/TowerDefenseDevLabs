@@ -16,42 +16,42 @@ import java.awt.Toolkit;
 
 public class Fenetre extends JFrame {
 	public Fenetre() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("Image/imgDL.jpg"));
-		setResizable(false);
-		setTitle("Tower Defense");
-		getContentPane().setBackground(new Color(0, 0, 0));
-		
-		JButton btnChargerPartie = new JButton("Charger Partie");
-		btnChargerPartie.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		
+		setIconImage(Toolkit.getDefaultToolkit().getImage("Image/imgDL.jpg"));  //sert a changer l'icone en haut a gauche de la fenetre
+		setResizable(false);  //empeche de changer la taille de la fenetre
+		setTitle("Tower Defense");  //donne un titre a la fenetre
+		getContentPane().setBackground(new Color(0, 0, 0));  //permet de mettre un fond noir
+
+		JButton btnChargerPartie = new JButton("Charger Partie");  //JButton sert a creer un bouton
+		btnChargerPartie.setFont(new Font("Tahoma", Font.PLAIN, 18));  //permet de changer la police d'écriture sur le bouton
+
 		JButton btnQuitter = new JButton("Quitter");
 		btnQuitter.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		btnQuitter.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);
+		btnQuitter.addActionListener(new ActionListener() {  //attend l'action
+			public void actionPerformed(ActionEvent e) {  // execute  l'action
+				System.exit(0); //ferme toutes les fenetres
 			}
 		});
-		
-		JLabel lblTowerDefense = new JLabel("");
-		lblTowerDefense.setIcon(new ImageIcon("Image/imgTD.jpg"));
+
+		JLabel lblTowerDefense = new JLabel("");  //permet de creer une étiquette
+		lblTowerDefense.setIcon(new ImageIcon("Image/imgTD.jpg"));  //insertion d'une image
 		lblTowerDefense.setFont(new Font("Plantagenet Cherokee", Font.BOLD, 50));
-		lblTowerDefense.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTowerDefense.setForeground(Color.RED);
-		
+		lblTowerDefense.setHorizontalAlignment(SwingConstants.CENTER);  //permet de centrer ce qui se trouve dans le Label
+		lblTowerDefense.setForeground(Color.RED);  //changer la couleur de l'écriture
+
 		JButton btnJouer = new JButton("Jouer");
 		btnJouer.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		btnJouer.setForeground(new Color(0, 0, 0));
 		btnJouer.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				dispose();
+				dispose();  //ferme la fenetre
 				choixJeu ChoixJeu = new choixJeu();
-				ChoixJeu.setSize(800,600);
-				ChoixJeu.setVisible(true);
-				ChoixJeu.setLocationRelativeTo(null);
+				ChoixJeu.setSize(800,600);  //donne une taille a la fenetre
+				ChoixJeu.setVisible(true);  //rend visible la fenetre
+				ChoixJeu.setLocationRelativeTo(null);  //centre la fenetre
 			}
 		});
-		GroupLayout groupLayout = new GroupLayout(getContentPane());
-		groupLayout.setHorizontalGroup(
+		GroupLayout groupLayout = new GroupLayout(getContentPane());  //permet de positionner les elements dans la fenetre
+		groupLayout.setHorizontalGroup( //decoupe la fenetre en plusieurs colonnes
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(98)

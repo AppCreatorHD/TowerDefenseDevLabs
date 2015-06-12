@@ -50,19 +50,21 @@ public class Fenetre extends JFrame {
 				ChoixJeu.setLocationRelativeTo(null);  //centre la fenetre
 			}
 		});
+		
+		//positionne tous les elements dans la fenetre
 		GroupLayout groupLayout = new GroupLayout(getContentPane());  //permet de positionner les elements dans la fenetre
 		groupLayout.setHorizontalGroup( //decoupe la fenetre en plusieurs colonnes
 			groupLayout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGap(98)
-					.addComponent(btnChargerPartie, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
+				.addGroup(groupLayout.createSequentialGroup()  //ajoute 
+					.addGap(89)  //intervalle avant le bouton "charger partie"
+					.addComponent(btnChargerPartie, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)  //ajoute un composant en lui attribuant une largeur
 					.addPreferredGap(ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
 					.addComponent(btnQuitter, GroupLayout.PREFERRED_SIZE, 191, GroupLayout.PREFERRED_SIZE)
-					.addGap(89))
+					.addGap(89))  //intervalle apres le bouton "Quitter"
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(284, Short.MAX_VALUE)
-					.addComponent(btnJouer, GroupLayout.PREFERRED_SIZE, 227, GroupLayout.PREFERRED_SIZE)
-					.addGap(273))
+					.addContainerGap(287, Short.MAX_VALUE)
+					.addComponent(btnJouer, GroupLayout.PREFERRED_SIZE, 226, GroupLayout.PREFERRED_SIZE)
+					.addGap(287))
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap(159, Short.MAX_VALUE)
 					.addComponent(lblTowerDefense, GroupLayout.PREFERRED_SIZE, 470, GroupLayout.PREFERRED_SIZE)

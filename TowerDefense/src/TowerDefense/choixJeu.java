@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+import java.awt.Font;
 
 public class choixJeu extends JFrame {
 	public choixJeu() {
@@ -75,18 +76,22 @@ public class choixJeu extends JFrame {
 		JLabel label_1 = new JLabel("");
 		label_1.setHorizontalAlignment(SwingConstants.CENTER);
 		label_1.setIcon(new ImageIcon("Image/Map3.png"));
+		
+		JLabel lblNewLabel_1 = new JLabel("DevLab's");
+		lblNewLabel_1.setFont(new Font("Segoe Script", Font.BOLD, 45));
+		lblNewLabel_1.setForeground(Color.RED);
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(687, Short.MAX_VALUE)
+					.addContainerGap(596, Short.MAX_VALUE)
 					.addComponent(btnRetour, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
 					.addContainerGap())
 				.addGroup(groupLayout.createSequentialGroup()
 					.addGap(73)
 					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
-						.addComponent(lblNewLabel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-						.addComponent(btnCarte, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
+						.addComponent(lblNewLabel, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 69, Short.MAX_VALUE)
+						.addComponent(btnCarte, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 					.addGap(98)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING, false)
 						.addComponent(label, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
@@ -96,11 +101,17 @@ public class choixJeu extends JFrame {
 						.addComponent(btnCarte_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(label_1, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE))
 					.addGap(56))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addContainerGap(312, Short.MAX_VALUE)
+					.addComponent(lblNewLabel_1)
+					.addGap(273))
 		);
 		groupLayout.setVerticalGroup(
 			groupLayout.createParallelGroup(Alignment.TRAILING)
 				.addGroup(groupLayout.createSequentialGroup()
-					.addContainerGap(190, Short.MAX_VALUE)
+					.addGap(40)
+					.addComponent(lblNewLabel_1)
+					.addPreferredGap(ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
 					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
 						.addComponent(label, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
